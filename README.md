@@ -1,3 +1,5 @@
+官方教程拷贝，修改AS版本为3.4.2，Gradle版本为5.1.1
+
 # Android_Me
 App that lets you style your own Android! This uses Fragments to create a flexible and responsive UI.
 

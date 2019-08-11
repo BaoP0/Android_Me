@@ -30,9 +30,6 @@ import java.util.List;
 // This activity will display a custom Android image composed of three body parts: head, body, and legs
 public class AndroidMeActivity extends AppCompatActivity {
 
-
-    private List<Integer> mImageIds;
-    private int mListIndex;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,7 +37,6 @@ public class AndroidMeActivity extends AppCompatActivity {
 
         if (savedInstanceState == null) {
 
-            // TODO (5) Only create new fragments when there is no previously saved state
             // Create a new head BodyPartFragment
             BodyPartFragment bodyFragment = new BodyPartFragment();
 
@@ -73,13 +69,5 @@ public class AndroidMeActivity extends AppCompatActivity {
                     .commit();
         }
 
-    }
-
-    public void setmListIndex(int mListIndex) {
-        this.mListIndex = mListIndex;
-    }
-
-    public void setmImageIds(List<Integer> mImageIds) {
-        this.mImageIds = mImageIds;
     }
 }

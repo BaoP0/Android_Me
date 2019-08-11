@@ -20,8 +20,8 @@ public class LegPartFragment extends Fragment {
     private static final String TAG = "LegPartFragment";
 
 
-    private List<Integer> mLegImageIds;
-    private int mLegIndex;
+    private List<Integer> mImageIds;
+    private int mListIndex;
 
     public LegPartFragment() {
         //no instance
@@ -32,8 +32,8 @@ public class LegPartFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_leg_part, container, false);
         ImageView ivLegPart = rootView.findViewById(R.id.iv_leg_part);
-        if (mLegImageIds != null) {
-            ivLegPart.setImageResource(mLegImageIds.get(mLegIndex));
+        if (mImageIds != null) {
+            ivLegPart.setImageResource(mImageIds.get(mListIndex));
         } else {
             Log.v(TAG, "This fragment has a null list of image id's");
         }
@@ -41,11 +41,11 @@ public class LegPartFragment extends Fragment {
         return rootView;
     }
 
-    public void setmLegImageIds(List<Integer> mLegImageIds) {
-        this.mLegImageIds = mLegImageIds;
+    public void setImageIds(List<Integer> imageIds) {
+        this.mImageIds = imageIds;
     }
 
-    public void setmLegIndex(int mLegIndex) {
-        this.mLegIndex = mLegIndex;
+    public void setListIndex(int index) {
+        mListIndex = index;
     }
 }

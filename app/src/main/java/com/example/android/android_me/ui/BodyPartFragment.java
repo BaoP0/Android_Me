@@ -15,14 +15,12 @@ import com.example.android.android_me.R;
 import java.util.List;
 
 public class BodyPartFragment extends Fragment {
-    // TODO (1) Create a setter method and class variable to set and store of a list of image resources
+    private List<Integer> mImageIds;
     // Tag for logging
     private static final String TAG = "BodyPartFragment";
-
-    // TODO (2) Create another setter method and variable to track and set the index of the list item to display
         // ex. index = 0 is the first image id in the given list , index 1 is the second, and so on
     // Variables to store a list of image resources and the index of the image that this fragment displays
-    private List<Integer> mImageIds;
+
     private int mListIndex;
 
     public BodyPartFragment() {
@@ -46,6 +44,10 @@ public class BodyPartFragment extends Fragment {
         if(mImageIds != null){
             // Set the image resource to the list item at the stored index
             imageView.setImageResource(mImageIds.get(mListIndex));
+
+            // TODO (1) Set a click listener on the image view and on a click increment the list index and set the image resource
+            // TODO (2) If you reach the end of a list of images, set the list index back to 0 (the first item in the list)
+
         } else {
             Log.v(TAG, "This fragment has a null list of image id's");
         }
@@ -62,4 +64,5 @@ public class BodyPartFragment extends Fragment {
         mListIndex = index;
     }
 
+    // TODO (4) Override onSaveInstanceState and save the current state of this fragment
 }

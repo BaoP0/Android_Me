@@ -34,12 +34,12 @@ import java.util.List;
 public class HeadPartFragment extends Fragment {
 
     // TODO (1) Create a setter method and class variable to set and store of a list of image resources
-    private List<Integer> mHeadImageIds;
+    private List<Integer> mImageIds;
     private static final String TAG = "HeadPartFragment";
 
     // TODO (2) Create another setter method and variable to track and set the index of the list item to display
     // ex. index = 0 is the first image id in the given list , index 1 is the second, and so on
-    private int mHeadIndex;
+    private int mListIndex;
 
     /**
      * Mandatory empty constructor for the fragment manager to instantiate the fragment
@@ -64,8 +64,8 @@ public class HeadPartFragment extends Fragment {
         // TODO (3) If a list of image ids exists, set the image resource to the correct item in that list
         // Otherwise, create a Log statement that indicates that the list was not found
 
-        if (mHeadImageIds != null) {
-            imageView.setImageResource(mHeadImageIds.get(mHeadIndex));
+        if (mImageIds != null) {
+            imageView.setImageResource(mImageIds.get(mListIndex));
         } else {
             Log.v(TAG, "This fragment has a null list of image id's");
 
@@ -74,11 +74,11 @@ public class HeadPartFragment extends Fragment {
         return rootView;
     }
 
-    public void setmHeadImageIds(List<Integer> mHeadImageIds) {
-        this.mHeadImageIds = mHeadImageIds;
+    public void setImageIds(List<Integer> imageIds) {
+        this.mImageIds = imageIds;
     }
 
-    public void setmHeadIndex(int mHeadIndex) {
-        this.mHeadIndex = mHeadIndex;
+    public void setListIndex(int index) {
+        mListIndex = index;
     }
 }

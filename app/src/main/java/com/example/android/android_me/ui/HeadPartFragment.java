@@ -53,10 +53,10 @@ public class HeadPartFragment extends Fragment {
         View rootView = inflater.inflate(R.layout.fragment_head_part, container, false);
 
         // Get a reference to the ImageView in the fragment layout
-        ImageView imageView = (ImageView) rootView.findViewById(R.id.body_part_image_view);
+        ImageView imageView = (ImageView) rootView.findViewById(R.id.iv_head_part);
 
         // Set the image to the first in our list of head images
-        imageView.setImageResource(mHeadIndex);
+        imageView.setImageResource(mHeadImageIds.get(mHeadIndex));
 
         // TODO (3) If a list of image ids exists, set the image resource to the correct item in that list
         // Otherwise, create a Log statement that indicates that the list was not found
